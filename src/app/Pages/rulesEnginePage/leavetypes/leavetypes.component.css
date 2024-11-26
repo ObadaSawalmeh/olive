@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #545454;
+    --secondary-color: #ffffff;
+    --btn-bg: #757575;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 2rem 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+app-table {
+    width: 100%;
+}
+
+.section--header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.section--header__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section--header__title a {
+    cursor: pointer;
+}
+
+.section--header__button {
+    padding: .6rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: .9rem;
+    opacity: .9;
+    font-weight: 500;
+    background-color: var(--btn-bg);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+
+.section--header__button i {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.section--content {
+    width: 100%;
+    height: 100vh;
+}
+
+.search--container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.search--input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    padding: .5rem 40px .5rem 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search--input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px #afafaf;
+}
+
+.search--input::placeholder {
+    color: #aaa;
+}
+
+.search--icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+
+@media(max-width:868px) {
+    .section--header__title {
+        font-size: 1.1rem;
+    }
+
+    .section--header__button {
+        width: 10rem;
+    }
+
+    .section--header__button span {
+        width: 100%;
+    }
+}
+
+
+@media(max-width:718px) {
+    .section--header__title {
+        font-size: 1.1rem;
+    }
+
+    .search--input {
+        width: 100%;
+    }
+
+    .section--header {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .section--header__button {
+        width: 8rem;
+        padding: .4rem 1rem;
+        font-size: .8rem;
+    }
+}

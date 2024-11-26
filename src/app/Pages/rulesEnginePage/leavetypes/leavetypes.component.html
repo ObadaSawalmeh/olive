@@ -1,0 +1,20 @@
+<div class="container">
+    <!-- Header Section -->
+    <div class="section--header">
+        <div class="section--header__title">
+            <a (click)="navigateTo('rules-engine')">Rules Engine&nbsp;</a> <i class="pi pi-arrow-right
+            "></i> Leave Types - Jordan
+        </div>
+        <button class="section--header__button">
+            <i class="pi pi-plus"></i> <span>Create New</span>
+        </button>
+    </div>
+    <div class="search--container">
+        <div>
+
+        </div>
+        <input type="text" class="search--input" placeholder="Search" />
+        <i class="search--icon pi pi-search"></i>
+    </div>
+    <app-table [headers]="tableHeaders" [rows]="tableData"></app-table>
+</div>

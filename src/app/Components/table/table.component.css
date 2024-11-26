@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #545454;
+    --secondary-color: #ffffff;
+    --btn-bg: #757575;
+}
+
+.section--content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollable Table Wrapper */
+.table--wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.data--table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 46px -22px rgba(173, 173, 173, 0.43);
+}
+
+.data--table th,
+.data--table td {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.data--table tr {
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+}
+
+
+.data--table th {
+    background-color: var(--primary-color);
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    padding: 1.1rem 0;
+}
+
+.data--table td {
+    padding: 1.5rem 0;
+    word-wrap: break-word;
+    font-size: 1rem;
+
+}
+
+
+.data--table td:first-child {
+    font-size: .9rem;
+}
+
+.data--table td:last-child {
+    padding-right: 4rem;
+}
+
+/* Buttons */
+.module--btn,
+.status {
+    width: 7rem;
+    padding: 0.4rem 0.7rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: var(--btn-bg);
+    color: white;
+    cursor: pointer;
+}
+
+.status {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 12px;
+    width: auto;
+    background-color: white;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.actions--btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #222;
+    cursor: pointer;
+}
+
+.actions--btn:hover {
+    color: #444;
+}
+
+.flag {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+/* Pagination Section */
+.pagination--container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem 0;
+}
+
+.items--perpage {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.items--perpage input {
+    padding: 2px 5px;
+    width: 3.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.pagination--info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding-left: 1rem;
+}
+
+.pagintion--right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.page--controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page--controls button {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s;
+    opacity: 0.4;
+}
+
+.page--controls button:hover {
+    background-color: #bbb;
+}
+
+.page--controls .active {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets and smaller laptops) */
+@media (max-width: 992px) {
+
+    .data--table th,
+    .data--table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .pagination--container {
+        gap: 15px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 600px) {
+
+    .data--table {
+        font-size: 0.8rem;
+    }
+
+    .data--table th,
+    .data--table td {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    .data--table th:first-child,
+    .data--table td:first-child {
+        padding-left: 1rem;
+    }
+
+    .module--btn,
+    .status {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .pagination--container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .items--perpage,
+    .pagination--info {
+        font-size: 0.75rem;
+    }
+
+    .page--controls button {
+        padding: 4px 8px;
+        font-size: 0.65rem;
+    }
+}

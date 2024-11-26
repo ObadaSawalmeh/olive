@@ -1,0 +1,20 @@
+<aside>
+    <a class="sidebar--item" [class.active]="isActive('dashboard')" (click)="navigateTo('dashboard')">
+        Dashboard
+    </a>
+    <a class="sidebar--item active" (click)="navigateTo('rules-engine')">
+        Rules Engine
+    </a>
+    <a class="sidebar--item" [class.active]="isActive('accounts')" (click)="navigateTo('accounts')">
+        Accounts
+    </a>
+    <a class="sidebar--item" [class.active]="isActive('billing')" (click)="navigateTo('billing')">
+        Billing
+    </a>
+    <a class="sidebar--item" [class.active]="isActive('usermanagement')" (click)="navigateTo('usermanagement')">
+        User Management
+    </a>
+    <a class="sidebar--item" [class.active]="isActive('settings')" (click)="navigateTo('settings')">
+        Settings
+    </a>
+</aside>

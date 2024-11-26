@@ -1,0 +1,116 @@
+nav {
+    width: 100%;
+    height: 5rem;
+    /* background-color: var(--primary-color); */
+    color: var(--secondary-color);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E8E8E8
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .7rem;
+    cursor: pointer;
+}
+
+nav .logo div {
+    background-image: url('../../../../public/OLIVE.png');
+    height: 21px;
+    width: 77px;
+}
+
+nav .logo i {
+    font-size: 1.1rem;
+    font-weight: 700;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+nav .logo i::before {
+    width: 100%;
+    height: 100%;
+}
+
+nav .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .7rem;
+}
+
+nav .profile .profile--notifications {
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    gap: 12.5px;
+    padding: 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav .profile .profile--notifications i {
+    position: relative;
+}
+
+nav .profile .profile--notifications i::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border:1px solid var(--primary-color);
+    background-color: red;
+    color:white;
+}
+
+nav .profile .profile--picture {
+    border-radius: 50%;
+    height: 52px;
+    aspect-ratio: 1;
+    background-color: var(--primary-color);
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+nav .profile .profile--details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: .5rem 0;
+}
+
+nav .profile .profile--details__username {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: 1%;
+}
+
+nav .profile .profile--details__role {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--secondary-text);
+}
+
+@media(width<400px) {
+
+    nav {
+        padding: 0 1rem;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,66 @@
+<!-- Content Section -->
+<div class="section--content">
+    <!-- Data Table -->
+    <div class="table--wrapper">
+        <table class="data--table">
+            <thead>
+                <tr>
+                    <th *ngFor="let header of headers">{{ header }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div *ngIf="rows.length === 0" class="empty-message">
+                    No data available
+                </div>
+
+                <tr *ngFor="let row of rows;let i =  index;" (click)="navigateToDetails(i)"
+                    [class.active]="isActive('rules-engine')">
+                    <td *ngFor="let header of headers">
+                        <ng-container [ngSwitch]="row[header]?.type || 'text'">
+                            <!-- Text Content -->
+                            <span *ngSwitchCase="'text'">{{ row[header] }}</span>
+
+                            <!-- Button Content -->
+                            <button *ngSwitchCase="'button'" [ngClass]="row[header]?.class">
+                                {{ row[header]?.label }}
+                            </button>
+
+                            <!-- Image Content -->
+                            <img *ngSwitchCase="'image'" [src]="row[header]?.src" [alt]="row[header]?.alt"
+                                class="flag" />
+
+                            <!-- Icon Content -->
+                            <i *ngSwitchCase="'icon'" [ngClass]="row[header]?.class"></i>
+                        </ng-container>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination--container">
+        <!-- Items per page dropdown -->
+        <div class="items--perpage">
+            Items per page:
+            <input type="text" placeholder="6">
+            <div class="pagination--info">1 - 6 out of 1</div>
+
+        </div>
+
+        <!-- Pagination info -->
+        <div class="pagintion--right">
+
+            <!-- Page controls -->
+            <div class="page--controls">
+                <button>&lt;</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>></button>
+                <button>&gt;&gt;</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
