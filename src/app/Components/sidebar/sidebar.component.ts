@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { Router } from '@angular/router';
-
+import { SidebarService } from '../../Services/sidebar.service';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
+  imports: [NgClass],
 })
 export class SidebarComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public sidebarService: SidebarService) {}
 
   navigateTo(route: string): void {
     const validRoutes = [

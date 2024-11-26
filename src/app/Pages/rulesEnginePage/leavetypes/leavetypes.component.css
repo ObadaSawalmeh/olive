@@ -12,6 +12,10 @@
     height: 100%;
 }
 
+app-table {
+    width: 100%;
+}
+
 .container {
     width: 100%;
     padding: 2rem 2.8rem;
@@ -21,8 +25,23 @@
     justify-content: space-around;
 }
 
-app-table {
+.page--header {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.page--header span:nth-child(1) {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.page--header span:nth-child(2) {
+    font-size: 1rem;
+    color: var(--secondary-text);
 }
 
 .section--header {
@@ -35,33 +54,51 @@ app-table {
 
 .section--header__title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
+    width: 80%;
 }
 
-.section--header__title a {
-    cursor: pointer;
-}
-
-.section--header__button {
-    padding: .6rem 2rem;
-    border: none;
-    border-radius: 6px;
-    font-size: .9rem;
-    opacity: .9;
-    font-weight: 500;
-    background-color: var(--btn-bg);
-    color: white;
+.section--filters {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: row;
+    width: 100%;
 }
 
+.filter--container {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
 
-.section--header__button i {
-    font-size: .7rem;
-    font-weight: 700;
+.filter--container svg {
+    color: #ccc;
+}
+
+.create--container {
+    height: 42px;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    font-size: .9rem;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    outline: none;
 }
 
 .section--content {
@@ -109,6 +146,16 @@ app-table {
     cursor: pointer;
 }
 
+@media(max-width:1180px) {
+    .create--container span {
+        font-size: .7rem;
+    }
+    .section--header{
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+}
 
 @media(max-width:868px) {
     .section--header__title {
