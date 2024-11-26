@@ -104,7 +104,12 @@ aside.expanded {
 .sidebar--item:hover {
     background-color: var(--bg);
 }
-
+@media(max-width:1280px) {
+    aside.expanded{
+        width: 12rem;
+    }
+    
+}
 @media(max-width:992px) {
     aside {
         width: 80px;
@@ -113,7 +118,7 @@ aside.expanded {
     aside.expanded {
         width: 80px;
     }
-    
+
     aside .sidebar--item span {
         transform-origin: left;
         transition: .1s ease;
@@ -152,7 +157,7 @@ aside.expanded {
     aside.expanded {
         width: 80px;
     }
-    
+
     aside .sidebar--item.active .item--icon {
         width: 50%;
         background: var(--bg);

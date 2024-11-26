@@ -1,7 +1,5 @@
-:root {
-    --primary-color: #545454;
-    --secondary-color: #ffffff;
-    --btn-bg: #757575;
+* {
+    font-family: "Outfit", sans-serif;
 }
 
 .section--content {
@@ -25,7 +23,7 @@
     background-color: #fff;
     overflow: hidden;
     border-radius: .7rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) -14px 2px 25px -6px;
 }
 
 .data--table th,

@@ -4,6 +4,10 @@
     --btn-bg: #757575;
 }
 
+* {
+    font-family: "Outfit", sans-serif;
+}
+
 :host {
     display: flex;
     flex-direction: column;
@@ -17,7 +21,7 @@ app-table {
 }
 
 .container {
-    width: 100%;
+    /* width: 100%; */
     padding: 2rem 2.8rem;
     display: flex;
     flex-direction: column;
@@ -47,7 +51,6 @@ app-table {
 .section--header {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
 }
@@ -99,6 +102,7 @@ app-table {
     background-color: var(--secondary-color);
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .section--content {
@@ -111,7 +115,6 @@ app-table {
     width: 100%;
     display: flex;
     align-self: center;
-    justify-content: space-between;
 }
 
 .search--input {
@@ -150,10 +153,27 @@ app-table {
     .create--container span {
         font-size: .7rem;
     }
-    .section--header{
+
+    .section--header {
         flex-direction: column;
         margin: 0 auto;
         gap: 1rem;
+    }
+}
+
+@media (max-width:1280px) {
+    .container {
+        padding: 2rem .5rem;
+    }
+
+    .section--header {
+        align-items: center;
+    }
+
+    .section--header__title {
+        font-size: 1.1rem;
+        width: 100%;
+        white-space: nowrap;
     }
 }
 

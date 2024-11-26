@@ -4,6 +4,10 @@
     --btn-bg: #757575;
 }
 
+* {
+    font-family: "Outfit", sans-serif;
+}
+
 :host {
     display: flex;
     flex-direction: column;
