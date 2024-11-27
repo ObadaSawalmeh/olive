@@ -10,10 +10,6 @@ import { LeavetypesComponent } from './Pages/rulesEnginePage/leavetypes/leavetyp
 
 export const routes: Routes = [
   {
-    path: '',
-    component: RulesEngineComponent,
-  },
-  {
     path: 'dashboard',
     component: DashboardComponent,
   },

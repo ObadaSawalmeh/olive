@@ -1,13 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { SidebarService } from '../../Services/sidebar.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  imports: [NgClass],
+  imports: [RouterModule, NgClass],
 })
 export class SidebarComponent {
   constructor(private router: Router, public sidebarService: SidebarService) {}

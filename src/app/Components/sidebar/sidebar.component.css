@@ -37,16 +37,6 @@ aside.collapsed .sidebar--item span {
     display: none;
 }
 
-aside.collapsed .sidebar--item svg {
-    margin: 0 auto;
-}
-
-aside.collapsed .sidebar--item.active .item--icon {
-    width: 50%;
-    background: var(--bg);
-    border-radius: 50%;
-}
-
 aside.expanded {
     width: 14rem;
 }
@@ -91,7 +81,7 @@ aside.expanded {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -2px;
     height: 70%;
     transform: translateY(-20%);
     width: 6px;
@@ -123,9 +113,11 @@ aside.expanded {
     aside.expanded {
         width: 12rem;
     }
-    aside.expanded .sidebar--item{
+
+    aside.expanded .sidebar--item {
         gap: .5rem;
     }
+
     aside.expanded .sidebar--item span {
         transform-origin: left;
         transition: .1s ease;
@@ -138,6 +130,7 @@ aside.expanded {
         height: 24px;
         flex-shrink: 0;
     }
+
     aside .sidebar--item svg {
         margin: 0 auto;
     }

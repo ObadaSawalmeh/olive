@@ -1,8 +1,9 @@
 <aside [ngClass]="{ 'collapsed': !sidebarService.isSidebarOpen(), 'expanded': sidebarService.isSidebarOpen() }">
     <ul class="sidebar--list">
-        <li class="sidebar--item" [class.active]="isActive('dashboard')" (click)="navigateTo('dashboard')">
+        <li class="sidebar--item" routerLink="/dashboard" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">
             <div class="item--icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
                     fill="none">
                     <path
                         d="M16 5C16 4.06812 16 3.60218 16.1522 3.23463C16.3552 2.74458 16.7446 2.35523 17.2346 2.15224C17.6022 2 18.0681 2 19 2C19.9319 2 20.3978 2 20.7654 2.15224C21.2554 2.35523 21.6448 2.74458 21.8478 3.23463C22 3.60218 22 4.06812 22 5V9C22 9.93188 22 10.3978 21.8478 10.7654C21.6448 11.2554 21.2554 11.6448 20.7654 11.8478C20.3978 12 19.9319 12 19 12C18.0681 12 17.6022 12 17.2346 11.8478C16.7446 11.6448 16.3552 11.2554 16.1522 10.7654C16 10.3978 16 9.93188 16 9V5Z"
@@ -22,7 +23,8 @@
                 Dashboard
             </span>
         </li>
-        <li class="sidebar--item" [class.active]="isActive('rules-engine')" (click)="navigateTo('rules-engine')">
+        <li class="sidebar--item" routerLink="/rules-engine" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">
             <div class="item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
                     <path
@@ -34,7 +36,8 @@
                 Rules Engine
             </span>
         </li>
-        <li class="sidebar--item" [class.active]="isActive('accounts')" (click)="navigateTo('accounts')">
+        <li class="sidebar--item" routerLink="/accounts" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">
             <div class="item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
                     <path
@@ -46,7 +49,8 @@
                 Accounts
             </span>
         </li>
-        <li class="sidebar--item" [class.active]="isActive('billing')" (click)="navigateTo('billing')">
+        <li class="sidebar--item" routerLink="/billing" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">
             <div class="item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
                     <path
@@ -58,7 +62,8 @@
                 Billing
             </span>
         </li>
-        <li class="sidebar--item" [class.active]="isActive('usermanagement')" (click)="navigateTo('usermanagement')">
+        <li class="sidebar--item" routerLink="/usermanagement" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">
             <div class="item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
                     <path
@@ -70,7 +75,8 @@
                 User Management
             </span>
         </li>
-        <li class="sidebar--item" [class.active]="isActive('settings')" (click)="navigateTo('settings')">
+        <li class="sidebar--item" routerLink="/settings" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }">
             <div class="item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
                     <path

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class TableComponent {
   constructor(private router: Router) {}
   navigateToDetails(arg0: any) {
-    this.router.navigate(['/rules-engine/leavetypes']);
+    this.router.navigate(['rules-engine/leavetypes']);
   }
   isActive(route: string): boolean {
     return this.router.url === `/${route}`;
