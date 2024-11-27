@@ -9,31 +9,34 @@
             Rules Engine
         </div>
         <div class="section--filters">
-            <div class="search--container">
-                <input type="text" class="search--input" placeholder="Search" >
-                <svg class="search--icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256">
-                    <path
-                        d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z">
-                    </path>
-                </svg>
+            <div class="section--filters">
+                <div class="search--container">
+                    <svg class="flex-inline" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ccc"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z">
+                        </path>
+                    </svg>
+                    <input type="text" class="search--input" placeholder="Search" />
+                </div>
+                <div class="filter--container">
+                    <span>
+                        Filter
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#cccccc" viewBox="0 0 256 256">
+                        <path
+                            d="M140,124v92a12,12,0,0,1-24,0V124a12,12,0,0,1,24,0Zm60,68a12,12,0,0,0-12,12v12a12,12,0,0,0,24,0V204A12,12,0,0,0,200,192Zm24-40H212V40a12,12,0,0,0-24,0V152H176a12,12,0,0,0,0,24h48a12,12,0,0,0,0-24ZM56,160a12,12,0,0,0-12,12v44a12,12,0,0,0,24,0V172A12,12,0,0,0,56,160Zm24-40H68V40a12,12,0,0,0-24,0v80H32a12,12,0,0,0,0,24H80a12,12,0,0,0,0-24Zm72-48H140V40a12,12,0,0,0-24,0V72H104a12,12,0,0,0,0,24h48a12,12,0,0,0,0-24Z">
+                        </path>
+                    </svg>
+                </div>
+                <button class="create--container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ffffff" viewBox="0 0 256 256">
+                        <path
+                            d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z">
+                        </path>
+                    </svg> <span>Create New</span>
+                </button>
             </div>
-            <div class="filter--container">
-                <span>
-                    Filter
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#cccccc" viewBox="0 0 256 256">
-                    <path
-                        d="M140,124v92a12,12,0,0,1-24,0V124a12,12,0,0,1,24,0Zm60,68a12,12,0,0,0-12,12v12a12,12,0,0,0,24,0V204A12,12,0,0,0,200,192Zm24-40H212V40a12,12,0,0,0-24,0V152H176a12,12,0,0,0,0,24h48a12,12,0,0,0,0-24ZM56,160a12,12,0,0,0-12,12v44a12,12,0,0,0,24,0V172A12,12,0,0,0,56,160Zm24-40H68V40a12,12,0,0,0-24,0v80H32a12,12,0,0,0,0,24H80a12,12,0,0,0,0-24Zm72-48H140V40a12,12,0,0,0-24,0V72H104a12,12,0,0,0,0,24h48a12,12,0,0,0,0-24Z">
-                    </path>
-                </svg>
-            </div>
-            <button class="create--container">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ffffff" viewBox="0 0 256 256">
-                    <path
-                        d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z">
-                    </path>
-                </svg> <span>Create New</span>
-            </button>
         </div>
     </div>
     <app-table [headers]="tableHeaders" [rows]="tableData"></app-table>

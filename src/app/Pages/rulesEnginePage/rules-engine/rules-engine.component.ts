@@ -80,5 +80,31 @@ export class RulesEngineComponent {
       },
       Actions: { type: 'icon', class: 'pi pi-ellipsis-v actions--btn' },
     },
+    {
+      'Rule name': 'Time Tracking',
+      Module: { type: 'button', label: 'Leaves', class: 'module--btn' },
+      Country: {
+        type: 'image',
+        src: 'https://cdn2.iconfinder.com/data/icons/world-flag-2/30/2-512.png',
+        alt: 'Palestine',
+      },
+      Status: { type: 'button', label: 'Draft', class: 'status status--draft' },
+      Actions: { type: 'icon', class: 'pi pi-ellipsis-v actions--btn' },
+    },
+    {
+      'Rule name': 'Time Tracking',
+      Module: { type: 'button', label: 'Leaves', class: 'module--btn' },
+      Country: {
+        type: 'image',
+        src: 'https://w7.pngwing.com/pngs/367/785/png-transparent-saudi-arab-asia-circle-country-flag-nation-national-o-shaped-flag-icon.png',
+        alt: 'Saudi Arabia',
+      },
+      Status: {
+        type: 'button',
+        label: 'Active',
+        class: 'status status--active',
+      },
+      Actions: { type: 'icon', class: 'pi pi-ellipsis-v actions--btn' },
+    },
   ];
 }

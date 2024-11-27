@@ -67,6 +67,27 @@ export class LeavetypesComponent {
       Status: { type: 'button', label: 'Draft', class: 'status status--draft' },
       Actions: { type: 'icon', class: 'pi pi-ellipsis-v actions--btn' },
     },
+    {
+      'Type Name': 'pligrimage',
+      Validity: {
+        type: 'button',
+        label: 'Unlimited',
+        class: 'status status--draft',
+      },
+
+      Status: { type: 'button', label: 'Draft', class: 'status status--draft' },
+      Actions: { type: 'icon', class: 'pi pi-ellipsis-v actions--btn' },
+    },
+    {
+      'Type Name': 'Not Paid',
+      Validity: {
+        type: 'button',
+        label: 'Unlimited',
+        class: 'status status--draft',
+      },
+      Status: { type: 'button', label: 'Draft', class: 'status status--draft' },
+      Actions: { type: 'icon', class: 'pi pi-ellipsis-v actions--btn' },
+    },
   ];
   constructor(private router: Router) {}
   navigateTo(route: string): void {

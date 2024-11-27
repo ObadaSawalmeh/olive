@@ -65,7 +65,7 @@ app-table {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 1rem;
     flex-direction: row;
     width: 100%;
@@ -89,13 +89,13 @@ app-table {
 
 .create--container {
     height: 42px;
-    width: 14rem;
+    width: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
-    font-size: .9rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 400;
     padding: .5rem 1rem;
     border-radius: 10px;
     color: var(--primary-color);
@@ -111,18 +111,13 @@ app-table {
 }
 
 .search--container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-self: center;
-}
-
-.search--input {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: .5rem;
     width: 20rem;
-    padding: .5rem 40px .5rem 12px;
+    height: 42px;
+    padding: .5rem 12px .5rem 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -130,10 +125,13 @@ app-table {
     transition: border-color 0.3s ease;
 }
 
-.search--input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px #afafaf;
+.search--input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+
 }
+
 
 .search--input::placeholder {
     color: #aaa;

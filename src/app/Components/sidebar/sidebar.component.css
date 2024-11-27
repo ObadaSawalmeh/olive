@@ -21,7 +21,7 @@ aside.collapsed {
 
 aside .sidebar--item span {
     transform-origin: left;
-    transition: .1s ease;
+    /* transition: .1s ease; */
     white-space: nowrap;
     opacity: 1;
 }
@@ -71,6 +71,9 @@ aside.expanded {
     letter-spacing: 1%;
 }
 
+.sidebar--item span {
+    height: 29px;
+}
 
 .sidebar--item svg {
     height: 28px;
@@ -97,29 +100,33 @@ aside.expanded {
 }
 
 .sidebar--item.active {
-    /* font-weight: 600; */
+    font-weight: 600;
     background-color: var(--bg);
 }
 
 .sidebar--item:hover {
     background-color: var(--bg);
 }
+
 @media(max-width:1280px) {
-    aside.expanded{
+    aside.expanded {
         width: 12rem;
     }
-    
+
 }
+
 @media(max-width:992px) {
     aside {
         width: 80px;
     }
 
     aside.expanded {
-        width: 80px;
+        width: 12rem;
     }
-
-    aside .sidebar--item span {
+    aside.expanded .sidebar--item{
+        gap: .5rem;
+    }
+    aside.expanded .sidebar--item span {
         transform-origin: left;
         transition: .1s ease;
         white-space: nowrap;
@@ -131,18 +138,11 @@ aside.expanded {
         height: 24px;
         flex-shrink: 0;
     }
-
-    aside .sidebar--item span {
-        opacity: 0;
-        display: none;
-    }
-
     aside .sidebar--item svg {
         margin: 0 auto;
     }
 
     aside .sidebar--item.active .item--icon {
-        width: 50%;
         background: var(--bg);
         border-radius: 50%;
     }

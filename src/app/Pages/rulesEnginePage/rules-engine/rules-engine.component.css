@@ -66,7 +66,7 @@ app-table {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 1rem;
     flex-direction: row;
     width: 100%;
@@ -94,19 +94,13 @@ app-table {
 }
 
 .search--container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-self: center;
-    justify-content: space-between;
-}
-
-.search--input {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: .5rem;
     width: 20rem;
-    padding: .5rem 40px .5rem 12px;
+    height: 42px;
+    padding: .5rem 12px .5rem 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -114,10 +108,13 @@ app-table {
     transition: border-color 0.3s ease;
 }
 
-.search--input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px #afafaf;
+.search--input {
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
+
+
 
 .search--input::placeholder {
     color: #aaa;
@@ -147,7 +144,7 @@ app-table {
 
 
     .container {
-        padding: 2rem 1rem;
+        padding: 2rem .5rem;
         align-items: flex-start;
         justify-content: center;
     }
@@ -158,8 +155,22 @@ app-table {
 }
 
 @media(max-width:718px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section--header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
     .section--header__title {
         font-size: 1.1rem;
+    }
+
+    .search--container {
+        width: 100%;
     }
 
     .search--input {
