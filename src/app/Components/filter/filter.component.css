@@ -1,0 +1,15 @@
+.filter--container {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    color: var(--secondary-text);
+}
+
+.filter--container svg {
+    color: var(--secondary-text);
+}

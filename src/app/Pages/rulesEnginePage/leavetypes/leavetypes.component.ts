@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { TableComponent } from '../../../Components/table/table.component';
+import { SearchComponent } from '../../../Components/search/search.component';
+import { FilterComponent } from '../../../Components/filter/filter.component';
+import { IconComponent } from '../../../Components/icon/icon.component';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-leavetypes',
   standalone: true,
-  imports: [TableComponent],
+  imports: [TableComponent, SearchComponent, FilterComponent, IconComponent],
   templateUrl: './leavetypes.component.html',
   styleUrl: './leavetypes.component.css',
 })

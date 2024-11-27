@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TableComponent } from '../../../Components/table/table.component';
-
+import { FilterComponent } from '../../../Components/filter/filter.component';
+import { SearchComponent } from '../../../Components/search/search.component';
 @Component({
   selector: 'app-rules-engine',
   standalone: true,
-  imports: [TableComponent],
+  imports: [TableComponent, FilterComponent, SearchComponent],
   templateUrl: './rules-engine.component.html',
   styleUrl: './rules-engine.component.css',
 })

@@ -1,46 +1,30 @@
+/* Sidebar Base Styling */
 aside {
     height: 100vh;
     width: 273px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     border: 1px solid var(--bg);
     padding: 2rem 0;
-    -webkit-box-shadow: 0 20px 50px 0px rgba(232, 232, 232, 0.65);
-    -moz-box-shadow: 0 20px 50px 0px rgba(232, 232, 232, 0.65);
-    box-shadow: 0 20px 50px 0px rgba(232, 232, 232, 0.65);
-    transition: .3s ease;
+    box-shadow: 0 20px 50px var(--bg);
+    transition: all 0.3s ease;
 }
 
+/* Collapsed Sidebar */
 aside.collapsed {
     width: 80px;
-    /* overflow: hidden; */
 }
 
-aside .sidebar--item span {
-    transform-origin: left;
-    /* transition: .1s ease; */
-    white-space: nowrap;
-    opacity: 1;
-}
-
-aside .sidebar--item svg {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-}
-
-aside.collapsed .sidebar--item span {
-    opacity: 0;
-    display: none;
-}
-
+/* Expanded Sidebar */
 aside.expanded {
     width: 14rem;
 }
 
+/* Sidebar List */
 .sidebar--list {
     list-style: none;
     padding: 0;
@@ -48,64 +32,85 @@ aside.expanded {
     width: 100%;
 }
 
+/* Sidebar Items */
 .sidebar--item {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    gap:.5rem;
     font-size: 19px;
     font-weight: 400;
     padding: 1rem 1.2rem;
     cursor: pointer;
     letter-spacing: 1%;
+    transition: background-color 0.5s ease;
 }
 
 .sidebar--item span {
     height: 29px;
+    white-space: nowrap;
+    opacity: 1;
+    transform-origin: left;
+    transition: opacity 0.1s ease;
 }
 
+/* Sidebar Icons */
 .sidebar--item svg {
-    height: 28px;
     width: 28px;
+    height: 28px;
+    flex-shrink: 0;
     margin-right: 1rem;
 }
 
 .sidebar--item:first-child svg {
-    height: 24px;
     width: 24px;
+    height: 24px;
     margin-right: 1rem;
+}
+
+/* Active Sidebar Item */
+.sidebar--item.active {
+    font-weight: 600;
+    background-color: var(--bg);
 }
 
 .sidebar--item.active::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -2px;
+    left: 0;
     height: 70%;
-    transform: translateY(-20%);
     width: 6px;
+    transform: translateY(-20%);
     border-radius: 0 5px 5px 0;
     background-color: var(--secondary-color);
 }
 
-.sidebar--item.active {
-    font-weight: 600;
-    background-color: var(--bg);
-}
-
+/* Hover Effect for Sidebar Item */
 .sidebar--item:hover {
     background-color: var(--bg);
 }
 
-@media(max-width:1280px) {
+/* Collapsed State for Sidebar Items */
+aside.collapsed .sidebar--item span {
+    opacity: 0;
+    display: none;
+}
+
+aside.collapsed .sidebar--item svg {
+    margin: 0 auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 1280px) {
     aside.expanded {
         width: 12rem;
     }
-
 }
 
-@media(max-width:992px) {
+@media (max-width: 992px) {
     aside {
         width: 80px;
     }
@@ -115,33 +120,15 @@ aside.expanded {
     }
 
     aside.expanded .sidebar--item {
-        gap: .5rem;
+        gap: 0.5rem;
     }
 
     aside.expanded .sidebar--item span {
-        transform-origin: left;
-        transition: .1s ease;
-        white-space: nowrap;
         opacity: 1;
-    }
-
-    aside .sidebar--item svg {
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0;
-    }
-
-    aside .sidebar--item svg {
-        margin: 0 auto;
-    }
-
-    aside .sidebar--item.active .item--icon {
-        background: var(--bg);
-        border-radius: 50%;
     }
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
     aside {
         width: 0;
         display: none;

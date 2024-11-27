@@ -1,36 +1,29 @@
-import { Component, signal } from '@angular/core';
-import { NgClass } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { SidebarService } from '../../Services/sidebar.service';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+// sidebar service to toggle the menu
+import { SidebarService } from '../../Services/Sidebar/sidebar.service';
+import { IconComponent } from '../icon/icon.component';
+import { RouterModule, Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  imports: [RouterModule, NgClass],
+  imports: [RouterModule, IconComponent, NgFor],
 })
 export class SidebarComponent {
+  sidebarItems = [
+    { label: 'Dashboard', icon: 'dashboard', link: '/dashboard' },
+    { label: 'Rules Engine', icon: 'rulesEngine', link: '/rules-engine' },
+    { label: 'Accounts', icon: 'accounts', link: '/accounts' },
+    { label: 'Billing', icon: 'billing', link: '/billing' },
+    {
+      label: 'User Management',
+      icon: 'usermanagement',
+      link: '/usermanagement',
+    },
+    { label: 'Settings', icon: 'settings', link: '/settings' },
+  ];
+
   constructor(private router: Router, public sidebarService: SidebarService) {}
-
-  navigateTo(route: string): void {
-    const validRoutes = [
-      'rules-engine',
-      'dashboard',
-      'accounts',
-      'billing',
-      'usermanagement',
-      'settings',
-    ];
-    if (validRoutes.includes(route)) {
-      this.router.navigate([`/${route}`]);
-    } else {
-      console.warn(`Invalid route: ${route}`);
-      this.router.navigate(['/notfound']);
-    }
-  }
-
-  isActive(route: string): boolean {
-    return this.router.url === `/${route}`;
-  }
 }

@@ -3,7 +3,6 @@
     <!-- Data Table -->
     <div class="table--wrapper">
         <table class="data--table">
-
             <thead>
                 <tr>
                     <th *ngFor="let header of headers">{{ header }}</th>
@@ -14,8 +13,7 @@
                     No data available
                 </div>
 
-                <tr *ngFor="let row of rows;let i =  index;" (click)="navigateToDetails(i)"
-                    [class.active]="isActive('rules-engine')">
+                <tr *ngFor="let row of rows;let i =  index;" (click)="navigateToDetails(i)">
                     <td *ngFor="let header of headers">
                         <ng-container [ngSwitch]="row[header]?.type || 'text'">
                             <!-- Text Content -->
@@ -31,12 +29,7 @@
                                 class="flag" />
 
                             <!-- Icon Content -->
-                            <span *ngSwitchCase="'icon'"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                    fill="#000000" viewBox="0 0 256 256">
-                                    <path
-                                        d="M112,60a16,16,0,1,1,16,16A16,16,0,0,1,112,60Zm16,52a16,16,0,1,0,16,16A16,16,0,0,0,128,112Zm0,68a16,16,0,1,0,16,16A16,16,0,0,0,128,180Z">
-                                    </path>
-                                </svg></span>
+                            <span *ngSwitchCase="'icon'"><app-icon name="actions"></app-icon></span>
                         </ng-container>
                     </td>
                 </tr>
@@ -45,23 +38,11 @@
     </div>
 
     <div class="pagination--container">
-        <!-- Items per page dropdown -->
-        <!-- <div class="items--perpage">
-            Items per page:
-            <input type="text" placeholder="6">
-
-        </div> -->
-
-        <!-- Pagination info -->
         <div class="pagintion--right">
-
-            <div class="pagination--info">1 - 6 of 1</div>
+            <div class="pagination--info">1 - 5 of 1</div>
             <!-- Page controls -->
             <div class="page--controls">
                 <button><span>&lt;</span></button>
-                <!-- <button class="active">1</button>
-                <button>2</button>
-                <button>3</button> -->
                 <button><span>&gt;</span></button>
             </div>
         </div>

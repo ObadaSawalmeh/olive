@@ -18,7 +18,8 @@ body {
 :root {
     --primary-color: #fffffff8;
     --secondary-color: #000000;
-    --secondary-text:#A4A4A4;
+    --secondary-text: #A4A4A4;
     --active-color: #d9d9d9;
+    --border-color: #E8E8E8;
     --bg: #f8f8f8;
 }
