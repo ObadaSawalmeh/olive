@@ -1,0 +1,163 @@
+<div class="container">
+
+    <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()">
+        <div class="form--header">
+            <label for="name" class="form--header__label">Name</label>
+            <input id="name" type="text" class="form-input" formControlName="name"
+                placeholder="Jordan Legal Leave Type Name" />
+        </div>
+
+        <div class="section--content">
+            <div class="section--header">Basic Info</div>
+            <div class="form-grid">
+                <div class="grid--left">
+                    <!-- Type -->
+                    <div class="form-group">
+                        <label class="form-label">Type:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" formControlName="type" value="Paid" />
+                                <span>Paid</span>
+                            </label>
+                            <label>
+                                <input type="radio" formControlName="type" value="Not Paid" />
+                                <span>
+                                    Not paid
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Entitled -->
+                    <div class="form-group">
+                        <label class="form-label">Entitled:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" formControlName="entitled" value="Through balance" /> <span>Through
+                                    balance</span>
+                            </label>
+                            <label>
+                                <input type="radio" formControlName="entitled" value="Event based" /> <span>
+                                    Event based
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- Docs Required -->
+                    <div class="form-group">
+                        <label class="form-label">Docs Required:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" formControlName="docsRequired" value="Yes" />
+                                <span>
+                                    Yes
+                                </span>
+                            </label>
+                            <label>
+                                <input type="radio" formControlName="docsRequired" value="No" />
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- Grace Period -->
+                    <div class="form-group">
+                        <label class="form-label">Grace Period:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" formControlName="gracePeriod" value="Yes" />
+                                <span>
+                                    Yes
+                                </span>
+                            </label>
+                            <label>
+                                <input type="radio" formControlName="gracePeriod" value="No" />
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Dispute -->
+                    <div class="form-group">
+                        <label class="form-label">Dispute:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" formControlName="dispute" value="Yes" />
+                                <span>
+                                    Yes
+                                </span>
+                            </label>
+                            <label>
+                                <input type="radio" formControlName="dispute" value="No" />
+                                <span>
+                                    No
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Validity -->
+                    <div class="form-group">
+                        <label class="form-label">Validity:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" formControlName="validity" value="Limited" />
+                                <span>Limited</span>
+                            </label>
+                            <label>
+                                <input type="radio" formControlName="validity" value="Unlimited" />
+                                <span>
+                                    Unlimited
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid--right">
+                    <!-- Unit -->
+                    <div class="form-group">
+                        <label for="unit" class="form-label">Unit:</label>
+                        <select id="unit" formControlName="unit" class="form-select">
+                            <option value="" disabled>Select</option>
+                            <option value="Hours">Hours</option>
+                            <option value="Days">Days</option>
+                        </select>
+                    </div>
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label for="gender" class="form-label">Gender:</label>
+                        <select id="gender" formControlName="gender" class="form-select">
+                            <option value="" disabled>Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Both">Both</option>
+                        </select>
+                    </div>
+                    <!-- Employment Type -->
+                    <div class="form-group">
+                        <label for="employmentType" class="form-label">Employment Type:</label>
+                        <select id="employmentType" formControlName="employmentType" class="form-select">
+                            <option value="" disabled>Select</option>
+                            <option value="Full-Time">Full-Time</option>
+                            <option value="Part-Time">Part-Time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section--content">
+            <div class="section--header">Balance</div>
+
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-cancel">Cancel</button>
+            <button type="submit" class="btn btn-create">Create</button>
+            <button type="button" class="btn btn-draft">Save as Draft</button>
+        </div>
+    </form>
+</div>

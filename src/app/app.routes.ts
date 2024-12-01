@@ -7,6 +7,7 @@ import { UsermanagementComponent } from './Pages/usermanagement/usermanagement.c
 import { BillingComponent } from './Pages/billing/billing.component';
 import { SettingsComponent } from './Pages/settings/settings.component';
 import { LeavetypesComponent } from './Pages/rulesEnginePage/leavetypes/leavetypes.component';
+import { CreateRuleComponent } from './Pages/rulesEnginePage/createrule/createrule.component';
 
 export const routes: Routes = [
   {
@@ -36,6 +37,10 @@ export const routes: Routes = [
   {
     path: 'rules-engine/leavetypes',
     component: LeavetypesComponent,
+  },
+  {
+    path: 'rules-engine/leavetypes/createrule',
+    component: CreateRuleComponent,
   },
   {
     path: 'notfound',

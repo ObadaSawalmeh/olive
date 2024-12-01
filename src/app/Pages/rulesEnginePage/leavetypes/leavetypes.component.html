@@ -12,10 +12,10 @@
             <div class="section--filters">
                 <app-search></app-search>
                 <app-filter></app-filter>
-                <button class="create--container">
+                <div class="create--container">
                     <app-icon name="create"></app-icon>
-                    <span>Create New</span>
-                </button>
+                    <span (click)="navigateTo('/rules-engine/leavetypes/createrule')">Create New</span>
+                </div>
             </div>
         </div>
     </div>

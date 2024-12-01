@@ -16,12 +16,12 @@
     height: 100%;
 }
 
-app-table {
+app-form {
     width: 100%;
 }
 
 .container {
-    width: 100%;
+    /* width: 100%; */
     padding: 2rem 2.8rem;
     display: flex;
     flex-direction: column;
@@ -35,8 +35,9 @@ app-table {
     align-items: center;
     justify-content: flex-start;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #E8E8E8;
 }
+
 .page--header span:nth-child(1) {
     font-size: .9rem;
     font-weight: 600;
@@ -48,10 +49,15 @@ app-table {
     color: var(--secondary-text);
 }
 
+.page--header span:nth-child(3) {
+    font-size: .9rem;
+    color: var(--secondary-text);
+}
+
+
 .section--header {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
 }
@@ -59,7 +65,7 @@ app-table {
 .section--header__title {
     font-size: 1.5rem;
     font-weight: 600;
-    width: 100%;
+    width: 80%;
 }
 
 .section--filters {
@@ -72,39 +78,75 @@ app-table {
     width: 100%;
 }
 
-
-
-.section--content {
+.page--content{
     width: 100%;
-    height: 100vh;
 }
 
-@media(max-width:1200px) {
-    .container {
-        padding: 2rem .8rem;
-    }
-}
 
-@media(max-width:992px) {
-    .container {
-        padding: 2rem .5rem;
-        align-items: flex-start;
-        justify-content: center;
-    }
-}
-
-@media(max-width:718px) {
-    .container {
-        padding: 0 1rem;
-    }
-
+@media(max-width:1380px) {
     .section--header {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .section--header__title {
         font-size: 1.1rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width:1280px) {
+    .container {
+        padding: 2rem .5rem;
+    }
+
+    .section--header {
+        align-items: center;
+    }
+
+    .section--header__title {
+        font-size: 1.2rem;
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width:1180px) {
+    .section--header {
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:868px) {
+    .section--header__title {
+        font-size: 1.1rem;
+    }
+
+    .section--header__button {
+        width: 10rem;
+    }
+
+    .section--header__button span {
+        width: 100%;
+    }
+
+    .section--header {
+        margin: 0 auto;
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+@media(max-width:718px) {
+    .section--header__title {
+        font-size: 1.1rem;
+    }
+
+    .section--header__button {
+        width: 8rem;
+        padding: .4rem 1rem;
+        font-size: .8rem;
     }
 }
